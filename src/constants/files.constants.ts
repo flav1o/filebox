@@ -1,0 +1,3 @@
+export const FILE_SIZES_CATEGORY = {
+  SMALL_FILE: 4194304,
+};
