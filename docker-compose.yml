@@ -1,0 +1,21 @@
+version: '3.8'
+
+networks:
+    filebox-network:
+
+
+services:
+    db:
+        image: mongo:4.2.0
+        container_name: filebox
+        networks:
+            default:
+            filebox-network:
+        volumes:
+            - mongo-filebox:/data/db
+        ports:
+            - 27017:27017
+        restart: unless-stopped
+
+volumes:
+    mongo-filebox:
